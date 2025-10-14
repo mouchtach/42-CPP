@@ -1,11 +1,9 @@
-NAME    = phonebook
+NAME    = Account
 CXX     = clang++
 CXXFLAGS= -Wall -Wextra -Werror -std=c++98
 RM      = rm -f
-SRC     =  main.cpp      \
-			src/phonebook.cpp \
-			src/messages.cpp \
-			src/contact.cpp
+SRC     =  Account.cpp      \
+		    tests.cpp       \
 
 OBJ     = $(SRC:.cpp=.o)
 
