@@ -7,6 +7,6 @@
 void	welcom();
 void	qust();
 void	add_func(Phonebook &phone);
-int		unpaces(std::string &line);
+void	unpaces(std::string &line);
 
 #endif

@@ -1,3 +1,5 @@
+// Copyright (c) 2-25 ymouchta
+
 #include "headers/main.hpp"
 #include "headers/colors.hpp"
 #include <iostream>
@@ -17,9 +19,9 @@ int	main()
 		getline(std::cin, line);
 		if(std::cin.eof())
 			break;
-		if(unpaces(line)) {
+		unpaces(line);
+		if(line.empty())
 			continue;
-		}
 		if(line == "ADD")
 			add_func(phone);
 		else if(line == "SEARCH")

@@ -1,5 +1,5 @@
 NAME    = Account
-CXX     = clang++
+CXX     = c++
 CXXFLAGS= -Wall -Wextra -Werror -std=c++98
 RM      = rm -f
 SRC     =  Account.cpp      \
