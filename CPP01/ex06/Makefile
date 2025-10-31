@@ -12,7 +12,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-%.o: %.cpp
+%.o: %.cpp Harl.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:

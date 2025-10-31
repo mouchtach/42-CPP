@@ -20,14 +20,17 @@ void Harl::error( void ) {
 
 void Harl::complain( std::string level ) {
 
-    void (Harl::*functions[])() = {&Harl::debug,&Harl::info,&Harl::warning,&Harl::error};
+    int index = 0;
     std::string levels[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
-    
-    for (size_t i = 0; i < 4; ++i) {
-        if (levels[i] == level) {
-            (this->*functions[i])();
-            return;
-        }
-    } 
-    std::cout << "[UNKNOWN LEVEL] No such complaint level." << std::endl;
+    while(levels[index] != level && index < 4)
+        index ++;
+    switch(index) {
+        case 0: debug();
+        case 1: info();
+        case 2: warning();
+        case 3: error();
+            break;
+        default:
+            std::cout << "[ Probably complaining about insignificant problems ]\n";
+    }
 }
