@@ -1,11 +1,9 @@
-NAME    = zombie
+NAME    = harl
 CXX     = c++
 CXXFLAGS= -Wall -Wextra -Werror -std=c++98
 RM      = rm -f
-SRC     = 	main.cpp		\
-			newZombie.cpp	\
-			randomChump.cpp	\
-			Zombie.cpp		\
+SRC     = 	main.cpp\
+			Harl.cpp
 
 OBJ     = $(SRC:.cpp=.o)
 
